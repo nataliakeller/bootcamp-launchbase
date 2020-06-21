@@ -1,38 +1,4 @@
 
-// Irei usar ponto e vírgula.
-
-// ************************ Primeira tentativa ************************
-// function categorizeByTypes() {
-//   for(let i = 0; i < user.transactions.length; i++) {
-//     if (user.transactions[i].type == 'credit') {
-//       credit.push(user.transactions[i].value);
-//     } else if (user.transactions[i].type == 'debit') {
-//       debit.push(user.transactions[i].value);
-//     }
-//   }
-// };
-
-// function getHigherTransactionByType(type) {
-//   categorizeByTypes();
-//   var lastNumber = 0;
-//   if (type == 'credit') {
-//     for (let i = 0; i < credit.length; i++) {
-//       if (lastNumber < credit[i]) {
-//         lastNumber = credit[i];
-//       }
-//     }
-//     return lastNumber
-//   } else if (type == 'debit') {
-//     for(let i = 0; i < debit.length; i++) {
-//       if (lastNumber < debit[i]) {
-//         lastNumber = debit[i];
-//       }
-//     }
-//     return lastNumber
-//   }
-// };
-// ************************ Primeira tentativa ************************
-
 const user = {
   name: "Mariana",
   transactions: [],
@@ -63,51 +29,48 @@ function getHigherTransactionByType(type) {
       }
     }
   }
-  return oldObject
+  return console.log(oldObject)
 }
 
 
+function getAverageTransactionValue() {
+  var total = user.transactions.length;
+  var sum = 0;
 
+  for(let i = 0; i < total; i++) {
+    sum += user.transactions[i].value;
+  }
 
-// function getAverageTransactionValue() {
+  return console.log(sum / total);
+};
 
-// };
+function getTransactionsCount() {
+  var counter = { credit: 0, debit: 0 };
 
-// function getTransactionsCount() {
+  for (let i = 0; i < user.transactions.length; i++) {
+    if (user.transactions[i].type == 'debit') {
+      counter.debit += 1;
+    } else if (user.transactions[i].type == 'credit') {
+      counter.credit += 1;
+    }
+  }
 
-// };
+  return console.log(counter)
 
-
-
-createTransaction({
-  type: 'credit',
-  value: 50.5
-});
-
-createTransaction({
-  type: 'debit',
-  value: 20.5
-});
-
-createTransaction({
-  type: 'debit',
-  value: 22
-});
-
-createTransaction({
-  type: 'credit',
-  value: 72.5
-});
-
-createTransaction({
-  type: 'credit',
-  value: 73
-});
+};
 
 
 
+createTransaction({ type: "credit", value: 50 });
+createTransaction({ type: "credit", value: 120 });
+createTransaction({ type: "debit", value: 80 });
+createTransaction({ type: "debit", value: 30 });
 
+console.log(user.balance); // 60
 
+getHigherTransactionByType("credit"); // { type: 'credit', value: 120 }
+getHigherTransactionByType("debit"); // { type: 'debit', value: 80 }
 
-console.log(user);
-console.log(getHigherTransactionByType('credit'));
+getAverageTransactionValue(); // 70
+
+getTransactionsCount(); // { credit: 2, debit: 2 }
