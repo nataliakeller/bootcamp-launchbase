@@ -87,8 +87,9 @@ li .active{
     top: 0;
 }
 
-.social-icon:hover {
-    fill: #7158c0;
+li a svg path:hover {
+    fill: #7158c0 !important;
+    transition: all 0.2s;
 }
 
 .social-media a img {
