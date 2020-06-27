@@ -222,3 +222,26 @@ li a svg path:hover {
 
 /*== MODAL ==*/
 
+.modal-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.703);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+}
+
+.modal {
+    background-color: #ffffff;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+}
+
+.modal .close-modal {
+    color: black;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 8px;
+    float: right;
+}
