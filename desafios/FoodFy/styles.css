@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+.header_wrapper {
+    text-align: center; /* Centraliza todo o header */
+}
+
+header {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    width: 60vw;
+    margin-top: 38px;
+}
+
+header ul li {
+    display: inline;
+    margin: 30px;
+}
+
+header ul li:first-child a:first-child {
+    margin-left: 122px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #111111;
+}
+
+.cover_wrapper {
+    width: 960px;
+    height: 366px;
+    background: #FBDFDB;
+    border-radius: 30px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.cover_wrapper img {
+    position: absolute;
+    top: 66px;
+    right: 100px;
+}
+
+.cover_wrapper h3, .cover_wrapper p {
+    left: 60px;
+    position: absolute;
+}
+
+.cover_wrapper h3 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #111111;
+    top: 117px;
+}
+
+.cover_wrapper p {
+    width: 316px;
+    height: 84px;
+    opacity: 0.7;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+    top: 165px;
+}
+
+.recipes_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 960px;
+    height: 59vh;
+    margin: auto auto;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.recipes_title {
+    position: relative;
+    height: 40px;
+    width: 960px;
+    margin: auto auto;
+}
+
+.recipes_title h4 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+
+}
+
+.recipe_block img {
+    border-radius: 15px;
+    width: 300px;
+    height: 140px;
+}
+
+.recipe_block h5 {
+    font-size: 18px;
+    color: #111111;
+    margin-top: 20px;
+}
+
+.recipe_block p {
+    font-size: 14px;
+    color: #777777;
+    padding: 5px 0px;
+}
+
+footer {
+    background: #EEEEEE;
+    width: auto;
+    height: 62px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+    line-height: 62px;
+}
