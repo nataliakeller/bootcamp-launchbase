@@ -13,6 +13,10 @@ body {
     text-align: center; /* Centraliza todo o header */
 }
 
+.header_active {
+    font-weight: bold;
+}
+
 header {
     position: relative;
     display: inline-flex;
@@ -20,6 +24,8 @@ header {
     width: 60vw;
     margin-top: 38px;
 }
+
+
 
 header ul li {
     display: inline;
@@ -126,4 +132,38 @@ footer p {
     font-size: 14px;
     color: #999999;
     line-height: 62px;
+}
+
+
+/* ABOUT */
+.about_article {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.about_article h2, .about_article h3 {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.about_article h2 {
+    font-size: 24px;
+    color: #111111;
+    margin-top: 50px;
+}
+
+.about_article h3 {
+    font-size: 20px;
+    color: #111111;
+}
+
+.about_article p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.about_article p:last-child {
+    padding-bottom: 50px;
 }
