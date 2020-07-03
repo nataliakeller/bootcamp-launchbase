@@ -121,7 +121,10 @@ header ul li a {
     padding: 5px 0px;
 }
 
+/* FOOTER */
+
 footer {
+    position: relative;
     background: #EEEEEE;
     width: auto;
     height: 62px;
@@ -167,4 +170,12 @@ footer p {
 
 .about_article p:last-child {
     padding-bottom: 40px;
+}
+
+/* RECIPES */
+
+#recipes_page {
+    padding: 50px;
+    position: relative;
+    height: auto;
 }
