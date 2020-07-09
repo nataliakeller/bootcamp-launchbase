@@ -11,4 +11,3 @@
 
 LaunchBase Bootcamp is an online Bootcamp with an 8 weeks duration. The Bootcamp's goal is to launch your career into the market. During these weeks the student is going to learn about the best technologies for web development. 
 
-------------
