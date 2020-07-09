@@ -1,17 +1,14 @@
-# bootcamp-launchbase
-
-
 <h1 align="center">
     <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="400px" />
 </h1>
-
-<h3 align="center">
- Launch Base Course
-</h3>
-
-### :rocket: What is Launch Base Course?
-**O LaunchBase é um treinamento no formato de bootcamp online que tem duração de 8 semanas. A cada semana os conteúdos são liberados de acordo com um cronograma, guiando o aluno pelas ferramentas e conceitos mais modernos de desenvolvimento web para entrar com o pé direito nesse universo e ir direto ao ponto naquilo que realmente importa para alcançar seus maiores objetivos como dev.******
+<p align="center">
+  <a href="#rocket-about-the-launchbase-bootcamp">About the LaunchBase Bootcamp</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
 
+## :rocket: About the LaunchBase Bootcamp
 
 
+LaunchBase Bootcamp is an online Bootcamp with an 8 weeks duration. The Bootcamp's goal is to launch your career into the market. During these weeks the student is going to learn about the best technologies for web development. 
+
+------------
