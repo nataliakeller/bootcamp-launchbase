@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block head %}
+    <title>Cursos — RocketSeat</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <section class="cards">
+
+        <div class="card" id="starter">
+            <div class="card_info">
+                <h2>Starter</h2>
+                <p>5 módulos</p>
+                <p><strong>Grátis</strong></p>
+            </div>
+
+            <div class="card_img">
+                <img src="https://app.rocketseat.com.br/static/media/Starter.64c237cc.svg" alt="">
+            </div>
+
+        </div>
+
+        <div class="card" id="launchbase">
+            <div class="card_info">
+                <h2>LaunchBase</h2>
+                <p>8 módulos</p>
+                <p><strong>Pago</strong></p>
+            </div>
+
+            <div class="card_img">
+                <img src="https://app.rocketseat.com.br/static/media/LaunchBase.08285320.svg" alt="">
+            </div>
+        </div>
+
+        <div class="card" id="gostack">
+            <div class="card_info">
+                <h2>GoStack</h2>
+                <p>20 módulos</p>
+                <p><strong>Pago</strong></p>
+            </div>
+
+            <div class="card_img">
+                <img src="https://app.rocketseat.com.br/static/media/GoStack.83a178a0.svg" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+
+            <div class="modal-content">
+                <iframe frameborder="0" src=""></iframe>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="scripts.js"></script>
+
+{% endblock %}
