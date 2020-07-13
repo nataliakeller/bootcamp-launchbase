@@ -13,12 +13,17 @@ nunjucks.configure('views', {
 });
 
 server.get('/', function (req, res) {
-    return res.render('about');
+    const about = {
+        title: "RocketSeat",
+        description: " Transforme sua carreira e seja um programador desejado no mercado, dominando as ferramentas mais modernas de desenvolvimento web e mobile.",
+        image_url: "/rocket.png"
+    }
+    return res.render('about' , { about });
 });
 
 
 server.get('/content', function (req, res) {
-    return res.render('content', {items: courses}); // adicionando os dados do data.js
+    return res.render('content', { items: courses }); // adicionando os dados do data.js
 });
 
 server.use(function(req, res) {

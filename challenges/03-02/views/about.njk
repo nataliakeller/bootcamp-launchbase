@@ -1,20 +1,19 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>Sobre — RocketSeat</title>
+    <title>Sobre — {{about.title}}</title>
 {% endblock %}
 
 {% block content %}
 <main>
     <div id="wrapper-about">
         <div class="img-company">
-            <img src="/rocket.png" alt="RocketSeat" id="img-rocket">
+            <img src="{{about.image_url}}" alt="{{about.title}}" id="img-rocket">
         </div>
 
         <div id="container-about">
-            <h1>RocketSeat</h1>
-            <p>Transforme sua carreira e seja um programador desejado no mercado, dominando as ferramentas mais modernas
-                de desenvolvimento web e mobile.</p>
+            <h1>{{about.title}}</h1>
+            <p>{{about.description}}</p>
 
         </div>
 
