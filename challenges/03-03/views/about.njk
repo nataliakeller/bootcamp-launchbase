@@ -1,0 +1,61 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre — {{about.title}}</title>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div id="wrapper-about">
+        <div class="img-company">
+            <img src="{{about.image_url}}" alt="{{about.title}}" id="img-rocket">
+        </div>
+
+        <div id="container-about">
+            <h1>{{about.title}}</h1>
+            <p>{{about.description}}</p>
+
+        </div>
+
+        <div class="container-tech">
+            <h2>Tecnologias Utilizadas:</h2>
+
+            <ul>
+                <li>
+                    <button data-balloon-length="xlarge"
+                        aria-label=" O JavaScript (JS) é uma linguagem de programação utilizada principalmente em páginas web. Com o JS, você pode mostrar mensagens e outras informações interessantes, fazer verificações ou mudar dinamicamente a apresentação visual das páginas, conforme o comportamento que você deseja que sua página (ou aplicação) possua. "
+                        data-balloon-pos="left">
+                        <img class="tech-icon" src="https://rocketseat.com.br/static/images/update/curso-javascript.svg"
+                            alt="">
+                    </button>
+                </li>
+                <li>
+                    <button data-balloon-length="medium"
+                        aria-label="O React é a biblioteca mais popular do JavaScript e é usada para construir uma interface de usuário (IU)."
+                        data-balloon-pos="up">
+                        <img class="tech-icon" src="https://rocketseat.com.br/static/images/update/curso-reactjs.svg" />
+                    </button>
+                </li>
+                <li>
+                    <button data-balloon-length="xlarge"
+                        aria-label="O React Native é um framework baseado no já aclamado React, desenvolvido pela equipe do Facebook, que possibilita o desenvolvimento de aplicações mobile, tanto para Android, como para iOS, utilizando apenas Javascript."
+                        data-balloon-pos="up">
+                        <img class="tech-icon"
+                            src="https://rocketseat.com.br/static/images/update/curso-react-native.svg" />
+                    </button>
+                </li>
+
+                <li>
+                    <button data-balloon-length="xlarge"
+                        aria-label="Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento não bloqueante que o torna leve e eficiente, ideal para aplicações em tempo real com troca intensa de dados através de dispositivos distribuídos."
+                        data-balloon-pos="right">
+                        <img class="tech-icon" src="https://rocketseat.com.br/static/images/update/curso-nodejs.svg"
+                            alt="">
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

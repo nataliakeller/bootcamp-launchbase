@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>{{course.title}}  — RocketSeat </title>
+  
+    <style>
+        body {
+        background-color:  #111013 !important;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <main class="background">
+        <div class="background_stars"></div>
+
+        <div class="course_wrapper">
+            <img src="{{course.image}}" alt="">
+            <h1>{{course.title}} </h1>
+            <p>{{course.description}}</p>
+
+        </div>
+    </main>
+{% endblock %}
