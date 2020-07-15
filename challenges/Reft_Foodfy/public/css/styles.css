@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+.header_wrapper {
+    text-align: center; /* Centraliza todo o header */
+}
+
+.header_active {
+    font-weight: bold;
+}
+
+header {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    width: 60vw;
+    margin-top: 38px;
+}
+
+header ul li {
+    display: inline;
+    margin: 30px;
+}
+
+header ul li:first-child a:first-child {
+    margin-left: 122px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #111111;
+}
+
+.cover_wrapper {
+    width: 960px;
+    height: 366px;
+    background: #FBDFDB;
+    border-radius: 30px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.cover_wrapper img {
+    position: absolute;
+    top: 66px;
+    right: 100px;
+}
+
+.cover_wrapper h3, .cover_wrapper p {
+    left: 60px;
+    position: absolute;
+}
+
+.cover_wrapper h3 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #111111;
+    top: 117px;
+}
+
+.cover_wrapper p {
+    width: 316px;
+    height: 84px;
+    opacity: 0.7;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+    top: 165px;
+}
+
+.recipes_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 960px;
+    height: 59vh;
+    margin: auto auto;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.recipes_title {
+    position: relative;
+    height: 40px;
+    width: 960px;
+    margin: auto auto;
+}
+
+.recipes_title h4 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+
+}
+
+.recipe_block img {
+    border-radius: 15px;
+    width: 300px;
+    height: 140px;
+}
+
+.recipe_block h5 {
+    font-size: 18px;
+    color: #111111;
+    margin-top: 20px;
+}
+
+.recipe_block p {
+    font-size: 14px;
+    color: #777777;
+    padding: 5px 0px;
+}
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    background: #EEEEEE;
+    width: 100%;
+    height: 62px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+    line-height: 62px;
+}
+
+
+/* ABOUT */
+.about_article {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.about_article h2, .about_article h3 {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.about_article h2 {
+    font-size: 24px;
+    color: #111111;
+    margin-top: 50px;
+}
+
+.about_article h3 {
+    font-size: 20px;
+    color: #111111;
+}
+
+.about_article p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin: 10px 0;
+}
+
+.about_article p:last-child {
+    padding-bottom: 40px;
+}
+
+/* RECIPES */
+
+#recipes_page {
+    padding: 50px;
+    position: relative;
+    height: auto;
+}
+
+/* MODAL */
+
+.modal_overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.603);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all 0.8s ease;
+}
+
+.modal_active {
+    transition: all 0.8s ease;
+    visibility: visible;
+    opacity: initial;
+}
+
+.modal {
+    width: 660px;
+    height: 413px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin: 20vh auto;
+    position: relative;
+}
+
+.modal_content .img_container {
+    width: 600px;
+    height: 200px;
+    margin: auto;
+}
+
+.modal_content .img_container img {
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.modal_content .description_wrapper {
+    margin-top: 50px;
+}
+
+.modal_content h5 {
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+
+    padding-top: 20px;
+}
+
+.modal_content p {
+    font-size: 18px;
+    color: #777777;
+    text-align: center;
+    padding-top: 13px;
+}
+
+.modal .modal_close {
+    background-color: #9999991a;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+}
+
+.modal .modal_close p {
+    color: rgb(192, 192, 192);
+    font-size: 16px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
