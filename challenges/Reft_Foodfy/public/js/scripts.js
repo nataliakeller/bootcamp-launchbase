@@ -1,74 +1,28 @@
-const modalOverlay = document.querySelector('.modal_overlay');
-const modal_close = modalOverlay.querySelector('.modal_close p');
+const nodeRecipes = document.querySelectorAll('._recipe');
+const recipes = Array.from(nodeRecipes); // Transformando em Array
 
-const node_recipes = document.querySelectorAll('.recipe_block');
-const recipes = Array.from(node_recipes);
+const nodeIndexBlocks = document.querySelectorAll('.recipe_index_block');
+const indexBlocks = Array.from(nodeIndexBlocks); // Transformando em Array
 
-const modal_image = document.querySelector('#modal_image')
-const modal_title = document.querySelector('#modal_title');
-const modal_description = document.querySelector('#modal_description');
-
-for (let recipe of recipes) {
+for (let i = 0; i < recipes.length; i++) {
+    const recipeDiv = recipes[i]; //divs que contém os elementos abaixo
+    const trigger = recipeDiv.querySelector('.trigger'); // Texto MOSTRAR/ESCONDER
+    const flexible = recipeDiv.querySelector('.flexible_tag'); // Parte do texto que some
     
-    let recipeName = recipe.classList[1];
-
-    recipe.addEventListener("click", function() {
-        modalOverlay.classList.add('modal_active');
-
-        switch (recipeName) {
-            case 'pizza':
-                modal_image.src = 'img/pizza.png';
-                modal_title.innerHTML = 'Pizza 4 Estações';
-                modal_description.innerHTML = 'Por Fabiana Melo';
-
-                break;
-            
-            case 'burger':
-                modal_image.src = 'img/burger.png';
-                modal_title.innerHTML = 'Triplo Bacon Burger';
-                modal_description.innerHTML = ' por Jorge Relato';
-
-                break;
-            case 'asinhas':
-                modal_image.src = 'img/asinhas.png';
-                modal_title.innerHTML = 'Asinhas de frango ao barbecue';
-                modal_description.innerHTML = 'por Vania Steroski';
-                break;
-            case 'doce':
-                modal_image.src = 'img/doce.png';
-                modal_title.innerHTML = 'Docinhos pão-do-céu';
-                modal_description.innerHTML = 'por Ricardo Golvea';
-                break;
-
-            case 'lasanha':
-                modal_image.src = 'img/lasanha.png';
-                modal_title.innerHTML = 'Lasanha mac n\' cheese';
-                modal_description.innerHTML = 'por Juliana Vieira';
-                break;
-
-            case 'espaguete':
-                modal_image.src = 'img/espaguete.png';
-                modal_title.innerHTML = 'Espaguete ao alho';
-                modal_description.innerHTML = 'por Júlia Kinoto';
-                break;
-                
-            default:
-                break;
-        };
+    trigger.addEventListener('click', function() {
+        if (trigger.innerHTML == 'MOSTRAR') {
+            trigger.innerHTML = 'ESCONDER';
+            flexible.classList.remove('hide');           
+        } else {
+            trigger.innerHTML = 'MOSTRAR';
+            flexible.classList.add('hide');
+        }
     });
 };
 
-modal_close.addEventListener("click", function() {
-    modalOverlay.classList.remove('modal_active');
-});
-
-modalOverlay.addEventListener("click", function() {
-    modalOverlay.classList.remove('modal_active');
-});
-
-window.onclick = function(event) {
-    if (event.target == modalOverlay) {
-        modalOverlay.classList.remove('modal_active');
-    };
-};
-
+for (let block of indexBlocks) {
+    block.addEventListener('click', function () {
+        const id = block.getAttribute('id');
+        window.location.href = `/recipes/${id}`
+    })
+}

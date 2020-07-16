@@ -25,10 +25,13 @@
 
         <div class="recipe_text">
 
-            <div class="_recipe showing">
-                <h4>Ingredientes:</h4> 
+            <div class="_recipe">
+                <div class="h4_a">
+                    <h4>Ingredientes:</h4> 
+                    <a class="trigger">ESCONDER</a>
+                </div>
                 
-                <ul>
+                <ul class="flexible_tag">
                     {% for ingredient in ingredients %}
                     <li>{{ingredient}}</li>
                     {% endfor %}
@@ -36,18 +39,26 @@
             </div>
 
             
-            <div class="_recipe hiding">
-                <h4>Modo de preparo</h4>
-                <ul>
+            <div class="_recipe">
+                <div class="h4_a">
+                    <h4>Modo de preparo</h4>
+                    <a class="trigger">ESCONDER</a>
+                </div>
+
+                <ul class="flexible_tag">
                     {% for step in steps %}
                     <li>{{step}}</li>
                     {% endfor %}
                 </ul>
             </div>
             
-            <div class="_recipe showing">
-                <h4>Informações adicionais</h4>
-                <p>{{recipe.information}}</p>
+            <div class="_recipe">
+                <div class="h4_a">
+                    <h4>Informações adicionais</h4>
+                    <a class="trigger">ESCONDER</a>
+                </div>
+
+                <p class="flexible_tag">{{recipe.information}}</p>
             </div>
 
         </div>

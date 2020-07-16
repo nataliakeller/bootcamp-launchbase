@@ -13,41 +13,14 @@
 </div>
 <div class="recipes_index_wrapper">
 
-    <div class="recipe_index_block">
-        <img src="/img/burger.png" alt="Triplo Bacon Burger">
-        <h5>Triplo Bacon Burger</h5>
-        <p>Por Jorge Relato</p>
+{% for recipe in recipes %}
+
+    <div class="recipe_index_block" id="{{loop.index0}}">
+        <img src="{{recipe.folder_img}}" alt="{{recipe.title}}">
+        <h5>{{recipe.title}}</h5>
+        <p>Por {{recipe.author}}</p>
     </div>
 
-    <div class="recipe_index_block">
-        <img src="/img/pizza.png" alt="">
-        <h5>Pizza 4 estações</h5>
-        <p>Por Fabiana Melo</p>
-    </div>
-
-    <div class="recipe_index_block">
-        <img src="/img/espaguete.png" alt="">
-        <h5>Espaguete ao alho</h5>
-        <p>Por Júlia Kinoto</p>
-    </div>
-
-    <div class="recipe_index_block">
-        <img src="/img/lasanha.png" alt="">
-        <h5>Lasanha mac n' cheese</h5>
-        <p>Por Juliano Vieira</p>
-    </div>
-
-    <div class="recipe_index_block">
-        <img src="/img/doce.png" alt="">
-        <h5>Docinhos pão-do-céu</h5>
-        <p>Por Ricardo Golvea</p>
-    </div>
-
-    <div class="recipe_index_block">
-        <img src="/img/asinhas.png" alt="">
-        <h5>Asinhas de frango ao barbecue</h5>
-        <p>Por Vania Steroski</p>
-    </div>
-
+{%endfor%}
 </div>
 {% endblock %}

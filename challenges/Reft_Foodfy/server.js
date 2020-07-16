@@ -3,6 +3,8 @@ const nunjucks = require('nunjucks');
 
 const server = express();
 
+const recipes = require('./public/js/data'); // Array de receitas carregadas do data.js
+
 server.use(express.static('public'));
 
 
@@ -16,11 +18,10 @@ server.listen(5000, function() {
 });
 
 server.get('/', function(req, res) {
-    return res.render('index');
+    return res.render('index', { recipes });
 });
 
 server.get('/recipes/:index', function (req, res) {
-    const recipes = require('./public/js/data'); // Array de receitas carregadas do data.js
     const recipeIndex = req.params.index;
 
     if (!recipes[recipeIndex]) {
@@ -29,10 +30,10 @@ server.get('/recipes/:index', function (req, res) {
     return res.render('recipes', {recipe: recipes[recipeIndex], ingredients: recipes[recipeIndex].ingredients, steps: recipes[recipeIndex].preparation})
 });
 
-server.get('/recipes', function(req, res) {
-    return res.render('recipes');
-});
-
 server.get('/about', function(req, res) {
     return res.render('about');
 });
+
+server.use(function(req, res) {
+    res.status(404).render("not-found");
+  });
