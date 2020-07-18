@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+        <title>Gym Manager</title>
+    {% endblock %}
+
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="header_wrapper">
+        <header>
+            <ul>
+                {% block li %}
+                <li><h1><a href="/">Gym Manager</a></h1></li>
+                <li><a href="/">Instructors</a></li>
+                <li><a href="/members">Members</a></li>
+                {% endblock %}
+            </ul>
+        </header>
+    </div>
+
+    {% block content %}
+    <main>
+        
+    </main>
+    {% endblock %}
+
+    <footer>
+        <p>Todos direitos reservados. &copy;</p>
+    </footer>
+
+<script src="/scripts.js"></script>
+</body>
+</html>
