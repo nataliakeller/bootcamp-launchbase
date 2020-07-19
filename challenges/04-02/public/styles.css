@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --dark-green: #283D3B;
+    --light-green: #197278;
+    --pink: #EDDDD4;
+    --light-red: #C44536;
+    --dark-red: #772E25;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--pink);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+li + li {
+    padding-left: 40px;
+}
+
+.header_wrapper {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    color: var(--dark-red);
+}
+
+.header_wrapper ul li {
+    display: inline-block;
+}
+
+.header_wrapper ul li h1 a {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.header_wrapper ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--dark-green);
+    display: block;
+}
+
+.header_wrapper ul li a:hover::after {
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+/*=== CARD ===*/
+.card {
+    width: 800px;
+    min-height: 500px;
+    background-color: white;
+    
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0 2px 7px 4px rgba(119, 46, 37, 0.3);
+    border-radius: 5px;
+
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: up;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.7s;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(30px);
+    } to {
+        opacity: 1;
+    }
+}
+
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child {
+    border: none;
+}
+
+.details .item div:nth-child(1) {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(182, 182, 182);
+    font-weight: normal;
+    letter-spacing: 0.7px;
+}
+
+.details .item div:nth-child(2) {
+    color: var(--light-red);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(119, 119, 119);
+
+}
+
+.details .item span {
+    padding: 8px 16px;
+    border-radius: 1;
+    color: white;
+    border-radius: 16px;
+    background-color: var(--light-green);
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.avatar {
+    filter: grayscale(70%);
+    border-radius: 5px 0 0 5px;
+}
+
+footer {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
