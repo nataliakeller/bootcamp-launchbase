@@ -1,29 +1,24 @@
 {
   "instructors": [
     {
-      "avatar_url": "https://www.google.com.br/",
-      "name": "Luana",
-      "birth": "8838-09-02",
-      "gender": "M",
+      "avatar_url": "https://app.rocketseat.com.br/",
+      "birth": 801792000000,
+      "gender": "F",
+      "created_at": 1595451316536,
       "services": "Crossfit",
-      "class": "in"
+      "type_class": "on",
+      "id": 1,
+      "name": "Silvia"
     },
     {
-      "avatar_url": "http://instagram.com/",
-      "name": "Lexi",
-      "birth": "1998-07-22",
+      "avatar_url": "https://www.google.com/",
+      "birth": -620006400000,
       "gender": "M",
-      "services": "Muscu",
-      "class": "in"
-    },
-    {
-      "avatar_url": "https://stackoverflow.com/questions/44495575/styling-input-radio-buttons",
-      "name": "Mayk",
-      "birth": -140486400000,
-      "gender": "M",
-      "services": "Crossfiteiro",
-      "class": "on",
-      "created_at": 1595275290462
+      "created_at": 1595451347050,
+      "services": "Crossfit",
+      "type_class": "in",
+      "id": 2,
+      "name": "Kleiton"
     }
   ]
 }
