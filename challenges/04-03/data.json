@@ -1,0 +1,15 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://app.rocketseat.com.br/",
+      "name": "Teste",
+      "birth": 1596153600000,
+      "gender": "F",
+      "education_level": "HIGH SCHOOL",
+      "services": "Crossfit",
+      "type_class": "in",
+      "created_at": 1595452161682
+    }
+  ]
+}

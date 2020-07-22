@@ -1,0 +1,80 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<form class="card" method="POST" action="/instructors">
+    <section class="avatar" style="background: url(https://source.unsplash.com/collection/1875415/600x500) no-repeat center center / cover">
+
+    </section>
+
+    <section class="details">
+        <h3>New Instructor</h3>
+
+        <div class="item">
+            <div>Avatar URL</div>
+            <div>
+                <input type="url" name="avatar_url" placeholder="http://">
+            </div>
+        </div>
+        <div class="item">
+            <div>Instructor</div>
+            <div>
+                <input type="text" name="name" placeholder="Instructor's name">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Date of Birth</div>
+            <div>
+                <input type="date" name="birth">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Gender</div>
+            <div>
+                <span>
+                    <input type="radio" name="gender" id="" value="F" checked> Female
+                </span>
+
+                <span>
+                    <input type="radio" name="gender" id="" value="M"> Male
+                </span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Education Level</div>
+            
+            <div>
+                <input type="text" name="education_level" placeholder="High School, Bachelor's Degree...">
+            </div>
+
+        </div>
+
+        <div class="item">
+            <div>Working Area</div>
+            
+            <div>
+                <input type="text" name="services" placeholder="Crossfit, Weight Training...">
+            </div>
+
+        </div>
+
+        <div class="item">
+            <div>Class Type</div>
+
+            <div>
+                <span>
+                    <input type="radio" name="type_class" value="in" checked> In-person
+                </span>
+                <span>
+                    <input type="radio" name="type_class" value="on"> Online
+                </span>
+            </div>
+        </div>
+
+        <button type="submit">Save</button>
+
+    </section>
+</form>
+{% endblock content %}
