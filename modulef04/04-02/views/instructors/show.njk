@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="card">
-    <section class="avatar" style="background: url(https://source.unsplash.com/collection/1875415/600x500) no-repeat center center / cover">
+    <section class="avatar" style="background: url({{instructor.avatar_url}}) no-repeat center center / cover">
 
     </section>
 
@@ -11,31 +11,32 @@
 
         <div class="item">
             <div>Instructor</div>
-            <div>Taylor Smith</div>
+            <div>{{instructor.name}}</div>
         </div>
 
         <div class="item">
             <div>Age</div>
-            <div>39</div>
+            <div>{{instructor.age}}</div>
         </div>
 
         <div class="item">
             <div>Gender</div>
-            <div>Feminine</div>
+            <div>{{ "Male" if instructor.gender == "M" else "Female"}}</div>
         </div>
 
         <div class="item">
             <div>Roles</div>
             
             <div>
-                <span>Weight Training</span>
-                <span>CrossFit</span>
+                {% for service in instructor.services %}
+                <span>{{service}}</span>
+                {% endfor %}
             </div>
         </div>
 
         <div class="item">
             <div>Education level</div>
-            <div>Bachelor's Degree in Physical Education</div>
+            <div>{{instructor.education_level}}</div>
         </div>
 
         <div class="item">
@@ -45,7 +46,7 @@
 
         <div class="item">
             <div>Registration Date</div>
-            <div>01/01/2020</div>
+            <div>{{instructor.created_at}}</div>
         </div>
     </section>
 </div>

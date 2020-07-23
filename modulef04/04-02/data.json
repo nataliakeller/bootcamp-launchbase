@@ -1,24 +1,59 @@
 {
   "instructors": [
     {
-      "avatar_url": "https://app.rocketseat.com.br/",
-      "birth": 801792000000,
-      "gender": "F",
-      "created_at": 1595451316536,
-      "services": "Crossfit",
-      "type_class": "on",
       "id": 1,
-      "name": "Silvia"
+      "avatar_url": "https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Valquíria",
+      "birth": 612489600000,
+      "gender": "F",
+      "education_level": "Bachelor's Degree",
+      "services": "Yoga, Yin Yoga",
+      "type_class": "in",
+      "created_at": 1595543324994
     },
     {
-      "avatar_url": "https://www.google.com/",
-      "birth": -620006400000,
-      "gender": "M",
-      "created_at": 1595451347050,
-      "services": "Crossfit",
-      "type_class": "in",
       "id": 2,
-      "name": "Kleiton"
+      "avatar_url": "https://images.pexels.com/photos/2085739/pexels-photo-2085739.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "Lorenzo",
+      "birth": 718675200000,
+      "gender": "M",
+      "education_level": "High School",
+      "services": "Crossfit, Manager",
+      "type_class": "in",
+      "created_at": 1595543365375
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.pexels.com/photos/1138903/pexels-photo-1138903.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "Roberto",
+      "birth": -294105600000,
+      "gender": "M",
+      "education_level": "Bachelor's Degree",
+      "services": "CEO, Commercialist",
+      "type_class": "in",
+      "created_at": 1595543483926
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.pexels.com/photos/863974/pexels-photo-863974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Lexi",
+      "birth": 794188800000,
+      "gender": "F",
+      "education_level": "Bachelor's Degree",
+      "services": "Crossfit, Weight Training",
+      "type_class": "in",
+      "created_at": 1595543572459
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://images.pexels.com/photos/2976107/pexels-photo-2976107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Natália",
+      "birth": 870220800000,
+      "gender": "F",
+      "education_level": "High School",
+      "services": "Crossfit, Weight Training",
+      "type_class": "in",
+      "created_at": 1595544422041
     }
   ]
 }
