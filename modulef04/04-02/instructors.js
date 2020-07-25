@@ -3,7 +3,6 @@ const data = require('./data.json');
 const { create } = require('browser-sync');
 const { age } = require('./temporary');
 
-
 // show
 exports.show = function(req, res) {
     const { id } = req.params;
@@ -16,11 +15,12 @@ exports.show = function(req, res) {
 
     if(!foundInstructor) return res.send('Instructor not found');
 
+
     const instructor = {
         ...foundInstructor,
         age: age(foundInstructor.birth),
         services: foundInstructor.services.split(','),
-        created_at: new Date(foundInstructor.created_at) //deletar em breve?
+        created_at:  new Intl.DateTimeFormat('en-GB').format(foundInstructor.created_at)
     };
 
     return res.render('instructors/show', { instructor });

@@ -165,12 +165,19 @@ button[type="submit"] {
 }
 
 
+input[type="text"], 
+input[type="url"], 
+input[type="date"] { 
+    border: none;
+}
 
-
-
-
-
-
+.edit {
+    position: relative;
+    padding: 2px 3px;
+    float: right;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px grey;
+}
 
 
 

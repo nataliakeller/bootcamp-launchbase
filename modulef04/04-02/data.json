@@ -54,6 +54,17 @@
       "services": "Crossfit, Weight Training",
       "type_class": "in",
       "created_at": 1595544422041
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://images.pexels.com/photos/3021601/pexels-photo-3021601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Heyla",
+      "birth": 641865600000,
+      "gender": "F",
+      "education_level": "Bachelor's Degree",
+      "services": "Manager",
+      "type_class": "in",
+      "created_at": 1595546910885
     }
   ]
 }
