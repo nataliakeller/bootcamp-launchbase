@@ -1,20 +1,20 @@
 <div class="item">
     <div>Avatar URL</div>
     <div>
-        <input type="url" name="avatar_url" placeholder="http://">
+        <input type="url" name="avatar_url" placeholder="http://" value="{{instructor.avatar_url}}">
     </div>
 </div>
 <div class="item">
     <div>Instructor</div>
     <div>
-        <input type="text" name="name" placeholder="Instructor's name">
+        <input type="text" name="name" placeholder="Instructor's name" value="{{instructor.name}}">
     </div>
 </div>
 
 <div class="item">
     <div>Date of Birth</div>
     <div>
-        <input type="date" name="birth">
+        <input type="date" name="birth" value="{{instructor.birth}}">
     </div>
 </div>
 
@@ -37,7 +37,7 @@
     <div>Education Level</div>
 
     <div>
-        <input type="text" name="education_level" placeholder="High School, Bachelor's Degree...">
+        <input type="text" name="education_level" placeholder="High School, Bachelor's Degree..." value="{{instructor.education_level}}">
     </div>
 
 </div>
@@ -46,7 +46,7 @@
     <div>Working Area</div>
 
     <div>
-        <input type="text" name="services" placeholder="Crossfit, Weight Training...">
+        <input type="text" name="services" placeholder="Crossfit, Weight Training..." value="{{instructor.services}}">
     </div>
 
 </div>
@@ -56,11 +56,27 @@
 
     <div>
         <span>
-            <input type="radio" name="type_class" value="in" checked="checked">
+            <input 
+            type="radio" 
+            name="type_class" 
+            value="in" 
+
+            {% if instructor.type_class == 'in' %}
+            checked
+            {% endif %}>
+
             In-person
+
         </span>
+
         <span>
-            <input type="radio" name="type_class" value="on">
+            <input 
+            type="radio" 
+            name="type_class" 
+            value="on"
+            {% if instructor.type_class == 'on' %}
+            checked
+            {% endif %}>
             Online
         </span>
     </div>

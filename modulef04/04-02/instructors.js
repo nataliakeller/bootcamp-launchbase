@@ -1,7 +1,7 @@
 const fs = require('fs'); // File System
 const data = require('./data.json');
 const { create } = require('browser-sync');
-const { age } = require('./temporary');
+const { age, date } = require('./temporary');
 
 // show
 exports.show = function(req, res) {
@@ -14,7 +14,6 @@ exports.show = function(req, res) {
     // foundinstructor é os dados do instrutor solicitado dentro de um array
 
     if(!foundInstructor) return res.send('Instructor not found');
-
 
     const instructor = {
         ...foundInstructor,
@@ -63,4 +62,24 @@ exports.post = function (req, res) {
         return res.redirect('/instructors');
     });
     
+};
+
+//edit
+exports.edit = function (req, res) {
+    const { id } = req.params;
+
+    const foundInstructor = data.instructors.find(function (instructor) {
+        return instructor.id == id;
+    });
+
+    // foundinstructor é os dados do instrutor solicitado dentro de um array
+
+    if (!foundInstructor) return res.send('Instructor not found');
+
+    const instructor = {
+        ...foundInstructor,
+        birth: date(foundInstructor.birth)
+    };
+    console.log(instructor.birth)
+    return res.render('instructors/edit', { instructor });
 };

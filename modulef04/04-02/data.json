@@ -65,6 +65,17 @@
       "services": "Manager",
       "type_class": "in",
       "created_at": 1595546910885
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://images.pexels.com/photos/3965399/pexels-photo-3965399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "Marcelo",
+      "birth": 780019200000,
+      "gender": "M",
+      "education_level": "Bachelor's Degree",
+      "services": "Crossfit",
+      "type_class": "on",
+      "created_at": 1595726571748
     }
   ]
 }

@@ -13,5 +13,17 @@ module.exports = {
         } else {
             return age;
         };
+    },
+    date: function(timestamp) {
+        const birthday = new Date(timestamp);
+
+        const year = birthday.getUTCFullYear();
+        let month = `0${birthday.getUTCMonth() + 1}`; // Lembrar que o mês é de 0-11
+        let day = `0${birthday.getUTCDate()}`; // UTC para pegar a data universal
+
+        month = month.slice(-2);
+        day = day.slice(-2);
+        
+        return `${year}-${month}-${day}`;
     }
-}
+};
