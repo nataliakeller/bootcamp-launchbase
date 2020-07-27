@@ -1,15 +1,33 @@
 {% extends "layout.njk" %}
 
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-<form class="card" method="POST" action="/instructors">
-    <section class="avatar" style="background: url(https://source.unsplash.com/collection/1875415/600x500) no-repeat center center / cover">
+    <div class="card">
+        <section class="avatar" style="background: url(https://source.unsplash.com/collection/1875415/600x500) no-repeat center center / cover"></section>
+        
+        <section class="details">
 
-    </section>
+            <form action="/instructors?_method=PUT" method="POST" id="form-delete">
 
-    <section class="details">
-        <h3>Edit Instructor</h3>
+                <button type="submit" class="m_icons" id="button_delete">
+                    <span style="font-size: 24px;" class="material-icons" id="span_delete">
+                        delete_forever
+                    </span>
+               </button>
+            </form>
 
-       {% include 'instructors/fields.njk'%}
-    </section>
-</form>
+            <form method="POST" action="/instructors?_method=PUT">
+                <h3>Edit Instructor</h3>
+
+                {% include 'instructors/fields.njk'%}
+
+                <input type="hidden" name="id" value="{{instructor.id}}">
+            </form>
+
+        </section>
+
+    </div>
 {% endblock content %}

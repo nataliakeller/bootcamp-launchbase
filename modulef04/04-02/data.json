@@ -12,7 +12,7 @@
       "created_at": 1595543324994
     },
     {
-      "id": 2,
+      "id": "2",
       "avatar_url": "https://images.pexels.com/photos/2085739/pexels-photo-2085739.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "name": "Lorenzo",
       "birth": 718675200000,
@@ -23,10 +23,10 @@
       "created_at": 1595543365375
     },
     {
-      "id": 3,
+      "id": "3",
       "avatar_url": "https://images.pexels.com/photos/1138903/pexels-photo-1138903.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "name": "Roberto",
-      "birth": -294105600000,
+      "birth": -315187200000,
       "gender": "M",
       "education_level": "Bachelor's Degree",
       "services": "CEO, Commercialist",
@@ -34,9 +34,9 @@
       "created_at": 1595543483926
     },
     {
-      "id": 4,
+      "id": "4",
       "avatar_url": "https://images.pexels.com/photos/863974/pexels-photo-863974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "name": "Lexi",
+      "name": "Alexis",
       "birth": 794188800000,
       "gender": "F",
       "education_level": "Bachelor's Degree",

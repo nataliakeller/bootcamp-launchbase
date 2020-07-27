@@ -64,7 +64,7 @@ exports.post = function (req, res) {
     
 };
 
-//edit
+// edit
 exports.edit = function (req, res) {
     const { id } = req.params;
 
@@ -80,6 +80,39 @@ exports.edit = function (req, res) {
         ...foundInstructor,
         birth: date(foundInstructor.birth)
     };
-    console.log(instructor.birth)
+
     return res.render('instructors/edit', { instructor });
+};
+
+// put 
+exports.put = function (req, res) {
+    const { id } = req.body;
+    let index = 0;
+
+    // Procurando o instrutor com o id enviado pelo body
+    const foundInstructor = data.instructors.find(function (instructor, foundIndex) {
+       if(id == instructor.id) {
+           index = foundIndex;
+           return true;
+        };
+    });
+
+    // foundinstructor é os dados do instrutor solicitado dentro de um array
+
+    if (!foundInstructor) return res.send('Instructor not found');
+
+    const instructor = {
+        ...foundInstructor,
+        ...req.body,
+        birth: Date.parse(req.body.birth)
+    };
+
+    data.instructors[index] = instructor //Em vez de usarmos o metodo push, reescrevemos os dados
+    // da string dentro do array
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err){
+        if(err) return res.send('Write error!');
+
+        return res.redirect(`instructors/${id}`);
+    });
 };
