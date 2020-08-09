@@ -10,7 +10,8 @@
         
         <section class="details">
 
-            <form action="/instructors?_method=PUT" method="POST" id="form-delete">
+            <form action="/instructors?_method=DELETE" method="POST" id="form-delete">
+                <input type="hidden" name="id" value="{{instructor.id}}">
 
                 <button type="submit" class="m_icons" id="button_delete">
                     <span style="font-size: 24px;" class="material-icons" id="span_delete">

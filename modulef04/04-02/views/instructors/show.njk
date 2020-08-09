@@ -9,9 +9,25 @@
         <section class="avatar" style="background: url({{instructor.avatar_url}}) no-repeat center center / cover"></section>
 
         <section class="details">
-            <a href="/instructors/{{ instructor.id }}/edit" class="m_icons" id="link_edit">
-                <span style="font-size: 22px" class="material-icons" id="span_edit">edit</span>
-            </a>
+
+            <div class="icons">
+                <a href="/instructors/{{ instructor.id }}/edit" class="m_icons" id="link_edit">
+                    <span style="font-size: 22px" class="material-icons" id="span_edit">edit</span>
+                </a>
+                    
+                <form action="/instructors?_method=DELETE" method="POST" id="form-delete">
+                    <input type="hidden" name="id" value="{{instructor.id}}">
+
+                    <button type="submit" class="m_icons" id="button_delete">
+                        <span style="font-size: 24px;" class="material-icons" id="span_delete">
+                            delete_forever
+                        </span>
+                </button>
+                </form>
+            </div>
+
+
+
 
             <h3>Details</h3>
 

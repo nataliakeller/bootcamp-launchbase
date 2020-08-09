@@ -3,6 +3,12 @@ const data = require('./data.json');
 const { create } = require('browser-sync');
 const { age, date } = require('./temporary');
 
+exports.index = function (req, res) {
+    
+
+    return res.render('instructors/index', { instructors: data.instructors });
+};
+
 // show
 exports.show = function(req, res) {
     const { id } = req.params;
@@ -104,7 +110,8 @@ exports.put = function (req, res) {
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id) //forçando o ID a vir como número
     };
 
     data.instructors[index] = instructor //Em vez de usarmos o metodo push, reescrevemos os dados
@@ -114,5 +121,23 @@ exports.put = function (req, res) {
         if(err) return res.send('Write error!');
 
         return res.redirect(`instructors/${id}`);
+    });
+};
+
+//delete
+
+exports.delete = function(req, res) {
+    const { id } = req.body;
+
+    const filterInstructors = data.instructors.filter(function(instructor){
+        return instructor.id != id;
+    });
+
+    data.instructors = filterInstructors;
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err){
+        if(err) return res.send('Write error!');
+        
+        return res.redirect('/instructors');
     });
 };
