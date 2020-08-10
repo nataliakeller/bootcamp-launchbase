@@ -1,0 +1,48 @@
+{
+  "instructors": [
+    {
+      "id": 2,
+      "avatar_url": "https://images.pexels.com/photos/2085739/pexels-photo-2085739.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "Lorenzo",
+      "birth": 718675200000,
+      "gender": "F",
+      "education_level": "High School",
+      "services": "Crossfit, Manager",
+      "type_class": "in",
+      "created_at": 1595543365375
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.pexels.com/photos/863974/pexels-photo-863974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Alexis",
+      "birth": 794188800000,
+      "gender": "F",
+      "education_level": "Bachelor's Degree",
+      "services": "Crossfit, Weight Training",
+      "type_class": "in",
+      "created_at": 1595543572459
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://images.pexels.com/photos/3021601/pexels-photo-3021601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Heyla",
+      "birth": 641865600000,
+      "gender": "F",
+      "education_level": "Bachelor's Degree",
+      "services": "Manager",
+      "type_class": "in",
+      "created_at": 1595546910885
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://images.pexels.com/photos/3965399/pexels-photo-3965399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "Marcelo",
+      "birth": 780019200000,
+      "gender": "M",
+      "education_level": "Bachelor's Degree",
+      "services": "Crossfit",
+      "type_class": "on",
+      "created_at": 1595726571748
+    }
+  ]
+}
