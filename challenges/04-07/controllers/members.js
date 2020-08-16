@@ -1,7 +1,7 @@
 const fs = require('fs'); // File System
 const data = require('../data.json');
 const { create } = require('browser-sync');
-const { age, date } = require('../temporary');
+const { date } = require('../temporary');
 
 
 // index 
@@ -66,7 +66,7 @@ exports.show = function(req, res) {
 
     const member = {
         ...foundMember,
-        age: age(foundMember.birth)
+        birth: date(foundMember.birth).birthday
     };
 
     return res.render('members/show', { member });

@@ -24,6 +24,12 @@ module.exports = {
         month = month.slice(-2);
         day = day.slice(-2);
         
-        return `${year}-${month}-${day}`;
+        return {
+            day,
+            month,
+            year,
+            iso: `${year}-${month}-${day}`,
+            birthday: `${day}/${month}`
+        };
     }
 };
