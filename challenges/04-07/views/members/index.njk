@@ -1,0 +1,50 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+<div class="card table-container">
+
+    <a href="/members/create"> 
+        <span class="material-icons material_button" id="create_button">
+            add
+            <div>NEW</div>
+        </span>
+    </a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Instructor</th>
+                <th>Roles</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for instructor in instructors %}
+            <tr>
+                <td>
+                    <span style="background-image: url({{instructor.avatar_url}});"></span>
+                    {{instructor.name}}
+                </td>
+                <td>{{instructor.services}}</td>
+                <td class="action_buttons">
+                    <a href="/instructors/{{instructor.id}}">
+                        <span class="material-icons">
+                            visibility
+                        </span>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

@@ -1,0 +1,127 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder="http://" value="{{member.avatar_url}}">
+    </div>
+</div>
+<div class="item">
+    <div>Name</div>
+    <div>
+        <input type="text" name="name" value="{{member.name}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Date of Birth</div>
+    <div>
+        <input type="date" name="birth" value="{{member.birth}}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Gender</div>
+    <div>
+        <span>
+            <input type="radio" name="gender" id="" value="F" checked="checked">
+            Female
+        </span>
+
+        <span>
+            <input type="radio" name="gender" id="" value="M">
+            Male
+        </span>
+    </div>
+</div>
+
+
+<div class="item">
+    
+    <div>Email</div>
+
+    <div>
+        <input type="email" name="email" placeholder="name@example.com" value="{{member.email}}">
+    </div>
+
+</div>
+<div class="item">
+    
+    <div>Weight (kg)</div>
+
+    <div>
+        <input type="number" name="weight" value="{{member.weight}}">
+    </div>
+
+</div>
+
+<div class="item">
+    
+    <div>Height (cm)</div>
+
+    <div>
+        <input type="number" name="height" placeholder="178 (cm)" value="{{member.height}}">
+    </div>
+
+</div>
+
+<div class="item">
+    
+    <div>IMC</div>
+
+    <div>
+        <select name="imc">
+            <option value="underweight" {% if member.imc == "underweight" %}selected{% endif %}>
+            Underweight
+            </option>
+            
+            <option value="normal" {% if member.imc == "normal" %}selected{% endif %}>
+                Normal
+            </option>
+            
+            <option value="overweight" {% if member.imc == "overweight" %}selected{% endif %}>
+            Overweight
+            </option>
+            
+            <option value="obesity1" {% if member.imc == "obesity1" %}selected{% endif %}>
+                Severe obesity
+            </option>
+            
+            <option value="obesity2" {% if member.imc == "obesity2" %}selected{% endif %}>
+                Morbid obesity
+            </option>
+        </select>
+    </div>
+
+</div>
+
+<div class="item">
+    <div>Class Type</div>
+
+    <div>
+        <span>
+            <input 
+            type="radio" 
+            name="type_class" 
+            value="in" 
+
+            {% if member.type_class == 'in' %}
+            checked
+            {% endif %}>
+
+            In-person
+
+        </span>
+
+        <span>
+            <input 
+            type="radio" 
+            name="type_class" 
+            value="on"
+            {% if member.type_class == 'on' %}
+            checked
+            {% endif %}>
+            Online
+        </span>
+    </div>
+</div>
+
+<button type="submit">Save</button>
