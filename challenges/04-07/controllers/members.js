@@ -11,27 +11,6 @@ exports.index = function (req, res) {
     return res.render('members/index', { members: data.members });
 };
 
-// show
-exports.show = function(req, res) {
-    const { id } = req.params;
-
-    const foundMember = data.members.find(function(member) {
-        return member.id == id;
-    });
-
-    // foundmember é os dados do instrutor solicitado dentro de um array
-
-    if(!foundMember) return res.send('Member not found');
-
-    const member = {
-        ...foundMember,
-        age: age(foundMember.birth),
-        created_at:  new Intl.DateTimeFormat('en-GB').format(foundMember.created_at)
-    };
-
-    return res.render('members/show', { member });
-};
-
 // create
 exports.create = function (req, res) {
     return res.render('members/create');
@@ -72,6 +51,27 @@ exports.post = function (req, res) {
     });
     
 };
+
+// show
+exports.show = function(req, res) {
+    const { id } = req.params;
+
+    const foundMember = data.members.find(function(member) {
+        return member.id == id;
+    });
+
+    // foundmember é os dados do instrutor solicitado dentro de um array
+
+    if(!foundMember) return res.send('Member not found');
+
+    const member = {
+        ...foundMember,
+        age: age(foundMember.birth)
+    };
+
+    return res.render('members/show', { member });
+};
+
 
 // edit
 exports.edit = function (req, res) {

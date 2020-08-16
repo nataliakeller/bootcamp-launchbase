@@ -63,7 +63,11 @@
 
             <div class="item">
                 <div>Class Type</div>
+                {% if member.type_class == 'in' %}
                 <div>In-person</div>
+                {% else %}
+                <div>Online</div>
+                {% endif %}
             </div>
 
             <div class="item">

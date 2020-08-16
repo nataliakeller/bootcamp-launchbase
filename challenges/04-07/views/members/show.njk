@@ -6,17 +6,17 @@
 
 {% block content %}
     <div class="card">
-        <section class="avatar" style="background: url({{instructor.avatar_url}}) no-repeat center center / cover"></section>
+        <section class="avatar" style="background: url({{member.avatar_url}}) no-repeat center center / cover"></section>
 
         <section class="details">
 
             <div class="icons">
-                <a href="/instructors/{{ instructor.id }}/edit" class="m_icons" id="link_edit">
+                <a href="/members/{{ member.id }}/edit" class="m_icons" id="link_edit">
                     <span style="font-size: 22px" class="material-icons" id="span_edit">edit</span>
                 </a>
                     
-                <form action="/instructors?_method=DELETE" method="POST" id="form-delete">
-                    <input type="hidden" name="id" value="{{instructor.id}}">
+                <form action="/members?_method=DELETE" method="POST" id="form-delete">
+                    <input type="hidden" name="id" value="{{member.id}}">
 
                     <button type="submit" class="m_icons" id="button_delete">
                         <span style="font-size: 24px;" class="material-icons" id="span_delete">
@@ -32,43 +32,49 @@
             <h3>Details</h3>
 
             <div class="item">
-                <div>Instructor</div>
-                <div>{{instructor.name}}</div>
+                <div>Member</div>
+                <div>{{member.name}}</div>
             </div>
 
             <div class="item">
-                <div>Age</div>
-                <div>{{instructor.age}}</div>
+                <div>Birthdate</div>
+                <div>{{member.birth}}</div>
             </div>
 
             <div class="item">
                 <div>Gender</div>
-                <div>{{ "Male" if instructor.gender == "M" else "Female"}}</div>
+                <div>{{ "Male" if member.gender == "M" else "Female"}}</div>
             </div>
 
             <div class="item">
-                <div>Roles</div>
-
-                <div>
-                    {% for service in instructor.services %}
-                        <span>{{service}}</span>
-                    {% endfor %}
-                </div>
+                <div>Email</div>
+                <div>{{member.email}}</div>
             </div>
 
             <div class="item">
-                <div>Education level</div>
-                <div>{{instructor.education_level}}</div>
+                <div>Weight</div>
+                <div>{{member.weight}} kg</div>
+            </div>
+
+            <div class="item">
+                <div>Height</div>
+                <div>{{member.height}} cm</div>
+            </div>
+
+            <div class="item">
+                <div>IMC</div>
+                <div style="text-transform: capitalize;">{{member.imc}}</div>
             </div>
 
             <div class="item">
                 <div>Class Type</div>
-                <div>In-person</div>
-            </div>
 
-            <div class="item">
-                <div>Registration Date</div>
-                <div>{{instructor.created_at}}</div>
+                {% if member.type_class == 'in' %}
+                <div>In-person</div>
+                {% else %}
+                <div>Online</div>
+                {% endif %}
+                
             </div>
         </section>
     </div>

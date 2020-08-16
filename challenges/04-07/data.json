@@ -2,62 +2,26 @@
   "members": [
     {
       "id": 1,
-      "avatar_url": "https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "name": "Teste 3",
-      "birth": 820454400000,
-      "gender": "M",
-      "type_class": "in",
-      "created_at": 1597510857291
+      "avatar_url": "https://images.pexels.com/photos/4348638/pexels-photo-4348638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Claudia",
+      "birth": 642470400000,
+      "gender": "F",
+      "email": "teste@teste.com",
+      "weight": "65",
+      "height": "178",
+      "imc": "underweight",
+      "type_class": "on"
     },
     {
       "id": 2,
-      "avatar_url": "https://app.rocketseat.com.br/node/fase-03-1",
-      "name": "Loka",
-      "birth": 788918400000,
-      "gender": "F",
-      "email": "nnataliakeller@gmail.com",
-      "weight": "25",
-      "height": "25",
-      "imc": "underweight",
-      "type_class": "in",
-      "created_at": 1597527505606
-    },
-    {
-      "id": 3,
-      "avatar_url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUUExMWFhUWGBgbGBgYGBcaGBcYGxcdFxYXGxoaHiggHR0lHRYXITEhJSktLi4uHh8zODMtNygtLisBCgoKDg0OGxAQGy0lICUvLS0tKy0tLS0tLzAtLS0tLS0rLS8tLS0rLS0tLS0tLS0vLS0tLS0tLS0tLS0tLS0tLf/AABEIAM4A9AMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAQIDBAYABwj/xAA8EAACAQMDAgQDBgUEAgIDAQABAhEAAyEEEjEFQRMiUWEGcYEjMkKRobEHFMHR8FJi4fEzciRDNIKSFf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACoRAAICAgIBAwMDBQAAAAAAAAABAhEhMQMSBCJBURMyYTNx8BSRobHR/9oADAMBAAIRAxEAPwD0XzHipFttT3uQB7104measQtlWqbdjNLYkn2ptxgDFAHG3Oadtp6cV2KQHBcU8DEUqRFOUz8qAE7V22nqtJMHNACqgrinpQ+/1/TI/htdG7uMmMxk8DJq9a1AcShDA9wQRSsfVoktj1p4IpipjJpoEZoAkZJrlWsd8Udca1u8/lK9h90nEc5YGDFYPSfF2ssXpFwuYyjTsMfg2zg/I/nUuVGv0XVntroYxUJt0D+E/ixNYkbdl5Z3pkgQYmYrQgzVWZNUQG2KXbFR6q7sySAKFaj4ns2wSy3IESQAeeO9F0NQb0gyWquymab0zqFrUILllgy8e4PcEdjVnbQSRrXbxMVzLTDFMBl5fSlUmpBFI9AEbLNMdDFPIxSzQBVFqKSrO2onFMCMxXVziupASrbH4smprccRXW178051MUWA2zeHFI4zjmuUYzUoaRgRSsCMOZzTzcFcyd5qJbJnNFjLKtIrkamxGT2rMfFHxBfsL9nam61y2ttSeUYxvckQgkgQc/LsrHGLZrkNC+u9RCAKC",
-      "name": "Lorenzo",
-      "birth": -20477664000000,
-      "gender": "F",
-      "email": "vocefoi@hotmail.com",
-      "weight": "11",
-      "height": "11",
-      "imc": "underweight",
-      "type_class": "in",
-      "created_at": 1597527547337
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://images.pexels.com/photos/2947337/pexels-photo-2947337.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "name": "Joao",
-      "birth": -27107481600000,
-      "gender": "F",
-      "email": "vocefoi@hotmail.com",
-      "weight": "11",
-      "height": "11",
-      "imc": "underweight",
-      "type_class": "in",
-      "created_at": 1597527635304
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "name": "Keline",
-      "birth": 800236800000,
-      "gender": "F",
-      "email": "vocefoi@hotmail.com",
-      "weight": "105",
+      "avatar_url": "https://images.pexels.com/photos/4724071/pexels-photo-4724071.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "name": "José",
+      "birth": 484704000000,
+      "gender": "M",
+      "email": "teste@teste.com",
+      "weight": "75",
       "height": "188",
-      "imc": "underweight",
+      "imc": "normal",
       "type_class": "in"
     }
   ],
@@ -70,7 +34,7 @@
       "gender": "F",
       "education_level": "High School",
       "services": "Crossfit, Manager",
-      "type_class": "in",
+      "type_class": "on",
       "created_at": 1595543365375
     },
     {
@@ -81,7 +45,7 @@
       "gender": "F",
       "education_level": "Bachelor's Degree",
       "services": "Crossfit, Weight Training",
-      "type_class": "in",
+      "type_class": "on",
       "created_at": 1595543572459
     },
     {
