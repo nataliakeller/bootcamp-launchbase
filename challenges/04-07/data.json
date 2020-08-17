@@ -4,12 +4,12 @@
       "id": 1,
       "avatar_url": "https://images.pexels.com/photos/4348638/pexels-photo-4348638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       "name": "Claudia",
-      "birth": 642470400000,
+      "birth": 800236800000,
       "gender": "F",
       "email": "teste@teste.com",
       "weight": "65",
       "height": "178",
-      "imc": "underweight",
+      "imc": "normal",
       "type_class": "on"
     },
     {
@@ -20,6 +20,18 @@
       "gender": "M",
       "email": "teste@teste.com",
       "weight": "75",
+      "height": "188",
+      "imc": "normal",
+      "type_class": "in"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "name": "Kauan",
+      "birth": 652492800000,
+      "gender": "M",
+      "email": "vocefoi@hotmail.com",
+      "weight": "88",
       "height": "188",
       "imc": "normal",
       "type_class": "in"
@@ -47,17 +59,6 @@
       "services": "Crossfit, Weight Training",
       "type_class": "on",
       "created_at": 1595543572459
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://images.pexels.com/photos/863926/pexels-photo-863926.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "name": "Flavia",
-      "birth": 741398400000,
-      "gender": "F",
-      "education_level": "Bachelor's Degree",
-      "services": "Yoga, Yin Yoga",
-      "type_class": "in",
-      "created_at": 1597310441856
     }
   ]
 }

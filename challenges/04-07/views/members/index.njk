@@ -20,7 +20,9 @@
         <thead>
             <tr>
                 <th>Member</th>
-                <th>Roles</th>
+                <th>Email</th>
+                <th>Height</th>
+                <th>Weight</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -33,7 +35,12 @@
                     <span style="background-image: url({{member.avatar_url}});"></span>
                     {{member.name}}
                 </td>
-                <td>{{member.services}}</td>
+
+                <td>{{member.email}}</td>
+                <td>{{member.height}}cm</td>
+                <td>{{member.weight}}kg</td>
+
+
                 <td class="action_buttons">
                     <a href="/members/{{member.id}}">
                         <span class="material-icons">
