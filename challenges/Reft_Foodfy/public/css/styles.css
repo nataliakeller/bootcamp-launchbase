@@ -4,6 +4,11 @@
     display: none;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: white;
@@ -20,9 +25,10 @@ body {
 header {
     position: relative;
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
     width: 60vw;
-    margin-top: 38px;
+    height: 8vh;
+
 }
 
 header ul li {
@@ -38,6 +44,10 @@ header ul li a {
     text-decoration: none;
     font-size: 16px;
     color: #111111;
+}
+
+#admin_header {
+    background-color: black;
 }
 
 .cover_wrapper {
@@ -169,6 +179,7 @@ header ul li a {
 .hide {
     display: none;
 }
+
 /*-- RECIPES INDEX --*/
 .recipes_index_wrapper {
     display: grid;
@@ -209,7 +220,7 @@ header ul li a {
     margin-top: 20px;
 }
 
-.recipe_index_block p {
+.recipe_author {
     font-size: 14px;
     color: #777777;
     padding: 5px 0px;
@@ -274,7 +285,58 @@ footer p {
     height: auto;
 }
 
-/*== not found ==*/
+/*== NOT FOUND ==*/
 #main {
     height: 90vh;
+}
+
+/*=== ADMIN INDEX ===*/
+.recipes_admin_content {
+    width: auto;
+    height: 100% !important;
+}
+
+.recipes_admin_title {
+    width: 960px;
+    margin: 30px auto;
+}
+.recipes_admin_title h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.recipes_admin_wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    width: 960px;
+    height: fit-content;
+    margin: auto auto;
+    gap: 25px;
+}
+
+.recipes_admin_wrapper .recipes_admin_block img {
+    border-radius: 9px;
+    width: 172px;
+    height: auto;
+}
+
+.recipes_admin_wrapper .recipes_admin_info {
+    position: relative;
+    display: block;
+    width: 280px;
+    float: right;
+    line-height: 20px;
+}
+
+.recipes_admin_wrapper .recipes_admin_info h5 {
+    font-size: 18px;
+}
+
+.recipes_admin_wrapper .recipes_admin_info a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #6558C3;
+    font-weight: bold;
 }

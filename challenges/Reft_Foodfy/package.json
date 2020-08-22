@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "npm-run-all -p start_nodemon browsersync",
+    "start_nodemon": "nodemon server.js -e njk,js,json",
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, views'"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "method-override": "^3.0.0",
     "nodemon": "^2.0.4",
     "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "npm-run-all": "^4.1.5"
   }
 }

@@ -16,13 +16,14 @@ for (let i = 0; i < recipes.length; i++) {
         } else {
             trigger.innerHTML = 'MOSTRAR';
             flexible.classList.add('hide');
-        }
+        };
     });
 };
 
 for (let block of indexBlocks) {
     block.addEventListener('click', function () {
         const id = block.getAttribute('id');
-        window.location.href = `/recipes/${id}`
-    })
-}
+        window.location.href = `/recipes/${id}`;
+    });
+};
+

@@ -1,0 +1,26 @@
+{% extends "client/layout.njk" %}
+
+
+{% block content %}
+<div class="cover_wrapper">
+    <img src="/img/chef.png" alt="FoodFy">
+    <h3>As melhores Receitas</h3>
+    <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+</div>
+
+<div class="recipes_index_title">
+    <h4>Mais acessadas</h4>
+</div>
+<div class="recipes_index_wrapper">
+
+{% for recipe in recipes %}
+
+    <div class="recipe_index_block" id="{{loop.index0}}">
+        <img src="{{recipe.folder_img}}" alt="{{recipe.title}}">
+        <h5>{{recipe.title}}</h5>
+        <p class="recipe_author">Por {{recipe.author}}</p>
+    </div>
+
+{%endfor%}
+</div>
+{% endblock %}
