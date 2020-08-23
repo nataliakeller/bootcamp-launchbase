@@ -6,9 +6,9 @@ exports.index = function(req, res) {
     res.render('admin/index', { recipes: dataRecipes.recipes }); // adicionar dados
 };
 
-// exports.create = function(req, res) {
-//     res.render('recipes/create');
-// };
+exports.create = function(req, res) {
+    res.render('admin/create');
+};
 
 // exports.post = function(req, res) {
     
@@ -20,7 +20,7 @@ exports.show = function(req, res) {
     if (!dataRecipes.recipes[recipeIndex]) {
         return res.send('Recipe Not Found');
     };
-    return res.render('admin/details', {recipe: dataRecipes.recipes[recipeIndex], ingredients: dataRecipes.recipes[recipeIndex].ingredients, steps: dataRecipes.recipes[recipeIndex].preparation})
+    return res.render('admin/details', {index: recipeIndex, recipe: dataRecipes.recipes[recipeIndex], ingredients: dataRecipes.recipes[recipeIndex].ingredients, steps: dataRecipes.recipes[recipeIndex].preparation})
 };
 
 // exports.edit = function(req, res) {

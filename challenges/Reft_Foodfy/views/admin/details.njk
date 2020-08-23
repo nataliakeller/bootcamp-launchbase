@@ -3,8 +3,10 @@
 {% block content %}
 <div class="admin_detail_wrapper">
     <h1>Receita: {{recipe.title}}</h1>
-
-    <a href="#">Editar Receita</a>
+    
+    <div class="admin_detail_edit_button button">
+        <a href="{{index}}/edit">Editar Receita</a>
+    </div>
 </div>
 
 <div class="recipe_wrapper">

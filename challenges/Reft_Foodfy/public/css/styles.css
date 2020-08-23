@@ -340,3 +340,104 @@ footer p {
     color: #6558C3;
     font-weight: bold;
 }
+
+/* === [ADMIN] DETAILS PAGE === */
+.admin_detail_wrapper {
+    width: 940px;
+    height: 20px;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+}
+/* Consegui manter fixado o tamanho */
+.admin_detail_wrapper h1 {
+    float: left;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+/* EDIT BUTTON */
+.admin_detail_edit_button {
+    position: relative;
+    width: 116px;
+    height: 32px;
+    float: right;
+}
+
+.admin_detail_edit_button a {
+    float: right;
+    padding: 8px;
+}
+
+/* === GLOBAL BUTTON === */
+.button a {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    background: #6558C3;
+    border-radius: 4px;
+}
+/* === [ADMIN] CREATE RECIPE PAGE === */
+
+.admin_new_content {
+    max-width: 960px;
+    height: 100%;
+    margin: 32px  auto;
+    text-align: center;
+}
+
+.admin_new_wrapper {
+    padding: 8px 0px 56px;
+}
+
+.admin_new_title h1 {
+    font-size: 24px;
+    color: #111111;
+    font-weight: bold;
+    float: left;
+}
+.admin_new_save_button a {
+    padding: 8px;
+    float: right;
+}
+
+.admin_new_item div {
+    font-size: 16px;
+    color: #111111;
+    font-weight: bold;
+    text-align: left;
+
+    margin-top: 10px;
+}
+
+.admin_new_item input {
+    width: 100%;
+    font-size: 22px;
+    padding: 10px;
+
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin: 10px 0 15px;
+}
+
+.admin_new_item button {
+    font-weight: bold;
+    color: #6558C3;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    margin: 1px 0 30px;
+    padding: 0;
+}
+
+#text_area_info {
+    width: 978px;
+    height: 300px;
+    border: 1px solid #DDDDDD;
+    margin: 10px 0 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
