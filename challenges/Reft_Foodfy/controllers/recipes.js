@@ -23,9 +23,9 @@ exports.show = function(req, res) {
     return res.render('admin/details', {index: recipeIndex, recipe: dataRecipes.recipes[recipeIndex], ingredients: dataRecipes.recipes[recipeIndex].ingredients, steps: dataRecipes.recipes[recipeIndex].preparation})
 };
 
-// exports.edit = function(req, res) {
-//     res.render('recipes/edit')
-// };
+exports.edit = function(req, res) {
+    res.render('admin/edit')
+};
 
 // exports.put = function(req, res) {
 

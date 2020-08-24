@@ -1,5 +1,24 @@
 {% extends "admin/layout.njk" %}
 
+{% block head %}
+    <title>Nova receita — Foodfy</title>
+{% endblock %}
+
 {% block content %}
-<input type="text">
+
+    <div class="admin_header_wrapper">
+        <div class="admin_header_title">
+            <h1>Editando Receita</h1>
+        </div>
+
+        <div class="admin_header_save button">
+            <a href="#">Salvar Receita</a>
+        </div>
+
+        <div class="admin_header_delete button">
+            <a href="#">Deletar</a>
+        </div>
+    </div>
+
+   {% include 'admin/fields.njk' %}
 {% endblock %}
