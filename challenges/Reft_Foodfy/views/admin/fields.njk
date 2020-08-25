@@ -3,30 +3,44 @@
         <div>Imagem da Receita</div>
 
         <div>
-            <input type="text">
+            <input type="text" required>
         </div>
     </div>
 
     <div class="admin_fields_item">
-        <div>Ingredientes</div>
+        <div>Título da Receita</div>
 
         <div>
-            <input type="text">
-        </div>
-        <div class="add_input">
-            <button type="button">Adicionar ingrediente</button>
+            <input type="text" required>
         </div>
     </div>
 
     <div class="admin_fields_item">
-        <div>Modo de Preparo</div>
+        <div id="ingredients">
+            <div>Ingredientes</div>
 
-        <div>
-            <input type="text">
+            <div class="fieldContainerIngredients">
+                <input type="text" name="ingredients[]" value="">
+            </div>
+
         </div>
-
         <div class="add_input">
-            <button type="button">Adicionar ingrediente</button>
+            <button type="button" class="add-ingredient">Adicionar ingrediente</button>
+        </div>
+    </div>
+
+    <div class="admin_fields_item">
+        <div id="steps">
+            <div>Modo de Preparo</div>
+
+            <div class="fieldContainerSteps">
+                <input type="text" name="steps[]" value="">
+            </div>
+
+        </div>
+        
+        <div class="add_input">
+            <button type="button" class="add-step">Adicionar passos</button>
         </div>
     </div>
 
@@ -38,3 +52,41 @@
         </div>
     </div>
 </div>
+
+<script>
+function addIngredient() {
+  const ingredients = document.querySelector("#ingredients");
+  const fieldContainer = document.querySelectorAll(".fieldContainerIngredients");
+
+  // Realiza um clone do último ingrediente adicionado
+  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+  // Não adiciona um novo input se o último tem um valor vazio
+  if (newField.children[0].value == "") return false;
+
+  // Deixa o valor do input vazio
+  newField.children[0].value = "";
+  ingredients.appendChild(newField);
+}
+
+document.querySelector(".add-ingredient").addEventListener("click", addIngredient);
+
+function addStep() {
+  const steps = document.querySelector("#steps");
+  const fieldContainer = document.querySelectorAll(".fieldContainerSteps");
+
+  // Realiza um clone do último ingrediente adicionado
+  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+  // Não adiciona um novo input se o último tem um valor vazio
+  if (newField.children[0].value == "") return false;
+
+  // Deixa o valor do input vazio
+  newField.children[0].value = "";
+  steps.appendChild(newField);
+}
+
+document
+  .querySelector(".add-step")
+  .addEventListener("click", addStep);
+</script>

@@ -11,7 +11,21 @@ exports.create = function(req, res) {
 };
 
 // exports.post = function(req, res) {
-    
+//     const keys = Object.keys(req.body); // Validação
+
+//     for (key of keys) {
+        
+//         if (req.body[key] == '') { // Se algum campo do body está vazio...
+//             return res.send('Please enter the required fields.');
+//         };
+//     };
+
+//     dataRecipes.recipes.push({
+//         image,
+//         title,
+//         ingredients,
+//         preparation
+//     })
 // };
 
 exports.show = function(req, res) {
