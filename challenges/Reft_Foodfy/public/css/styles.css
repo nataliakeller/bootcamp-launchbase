@@ -4,9 +4,21 @@
     display: none;
 }
 
-html, body {
-    min-height: 100%;
+body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+button {
+    border: none;
+    background-color: transparent;
 }
 
 body {
@@ -292,8 +304,8 @@ footer p {
 
 /*=== ADMIN INDEX ===*/
 .recipes_admin_content {
-    width: auto;
-    height: 100% !important;
+    width: 100%;
+    min-height: 100%;
 }
 
 .recipes_admin_title {
@@ -351,6 +363,7 @@ footer p {
     padding: 30px 20px 0;
 }
 /* Consegui manter fixado o tamanho */
+
 .admin_detail_wrapper h1 {
     float: left;
     font-weight: bold;
@@ -371,7 +384,29 @@ footer p {
     padding: 8px;
 }
 
-/* === GLOBAL BUTTON === */
+
+/* === ADMIN HEADER TOO === */
+/* === BUTTONs === */
+.admin_buttons {
+    position: relative;  
+    margin-bottom: -100px;
+}
+
+.admin_buttons button {
+    width: 128px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #6558C3;
+    color: #FFFFFF;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#delete {
+    background-color: #DC4747;
+}
+
 .button a {
     font-size: 16px;
     color: #FFFFFF;
@@ -381,12 +416,17 @@ footer p {
     border-radius: 4px;
 }
 
-/* === ADMIN HEADER/TITLE/BUTTONS === */
+/* === ADMIN HEADER === */
 .admin_header_wrapper {
-    width: 960px;
-    height: auto;
-    padding: 8px 0px 56px;
-    margin: 32px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 490px 490px;
+    grid-template-rows: 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    padding: 32px 0;
+    grid-column-gap: 200px;
 }
 
 .admin_header_title h1 {
@@ -396,15 +436,6 @@ footer p {
     float: left;
 }
 
-.admin_header_save a, .admin_header_delete a {
-    padding: 8px;
-    float: right;
-}
-
-.admin_header_delete a {
-    background-color: #DC4747;
-    margin-right: 10px;
-}
 
 /* === [ADMIN] FIELDS NJK === */
 .admin_fields_content {
@@ -442,6 +473,11 @@ footer p {
     margin: 1px 0 30px;
     padding: 0;
 }
+
+.field_container {
+    position: relative;
+}
+
 /* TEXT AREA */
 #text_area_info {
     width: 978px;

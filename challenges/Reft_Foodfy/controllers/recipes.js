@@ -10,23 +10,35 @@ exports.create = function(req, res) {
     res.render('admin/create');
 };
 
-// exports.post = function(req, res) {
-//     const keys = Object.keys(req.body); // Validação
+exports.post = function(req, res) {
+    const keys = Object.keys(req.body); // Validação
 
-//     for (key of keys) {
+    for (key of keys) {
         
-//         if (req.body[key] == '') { // Se algum campo do body está vazio...
-//             return res.send('Please enter the required fields.');
-//         };
-//     };
+        if (req.body[key] == '') { // Se algum campo do body está vazio...
+            return res.send('Please enter the required fields.');
+        };
+    };
+    // let { image, title, ingredients, steps, adicional_info } = req.body;
+    return console.log(req.body)
 
-//     dataRecipes.recipes.push({
-//         image,
-//         title,
-//         ingredients,
-//         preparation
-//     })
-// };
+    // **********************************  ATÉ AQUI OK *********************************
+
+    // dataRecipes.recipes.push({
+    //     image,
+    //     title,
+    //     ingredients,
+    //     steps,
+    //     adicional_info
+    // });
+
+    // fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) { // escrevendo os dados no arquivo data.json
+
+    //     if (err) return res.send("writeFile error!");
+
+    //     return console.log(req.body)
+    // });
+};
 
 exports.show = function(req, res) {
     const recipeIndex = req.params.index;
