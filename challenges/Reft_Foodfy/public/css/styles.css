@@ -58,9 +58,6 @@ header ul li a {
     color: #111111;
 }
 
-#admin_header {
-    background-color: black;
-}
 
 .cover_wrapper {
     width: 960px;
@@ -308,7 +305,12 @@ footer p {
     min-height: 100%;
 }
 
+
 .recipes_admin_title {
+    display: grid;
+    grid-template-columns: 220px 30px;
+    justify-items: baseline;
+
     width: 960px;
     margin: 30px auto;
 }
@@ -316,6 +318,19 @@ footer p {
     font-weight: bold;
     font-size: 24px;
     color: #111111;
+}
+
+/*=== ADD BUTTON === */
+.recipes_admin_title #add_button_link span {
+    color: #000000;
+    font-size: 24px;
+    box-sizing: border-box;
+
+}
+.recipes_admin_title #add_button_link span:hover {
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 3px 1px rgba(209,205,209,1);
+    border-radius: 2px;
 }
 
 .recipes_admin_wrapper {
@@ -396,11 +411,10 @@ footer p {
     width: 128px;
     height: 40px;
     font-size: 16px;
+    border-radius: 4px;
     background-color: #6558C3;
     color: #FFFFFF;
-    border-radius: 4px;
     font-weight: bold;
-    margin-left: 10px;
 }
 
 #delete {
@@ -417,16 +431,23 @@ footer p {
 }
 
 /* === ADMIN HEADER === */
+#admin_header {
+    background-color: black;
+}
+
 .admin_header_wrapper {
     position: relative;
-    display: grid;
-    grid-template-columns: 490px 490px;
-    grid-template-rows: 1fr 1fr;
-    margin-left: auto;
-    margin-right: auto;
     width: 980px;
     padding: 32px 0;
-    grid-column-gap: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+#admin_header_wrapper_edit {
+    grid-template-columns: 70% 30%;
+    gap: 5%;
 }
 
 .admin_header_title h1 {

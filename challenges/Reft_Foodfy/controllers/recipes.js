@@ -19,10 +19,9 @@ exports.post = function(req, res) {
             return res.send('Please enter the required fields.');
         };
     };
-    // let { image, title, ingredients, steps, adicional_info } = req.body;
-    return console.log(req.body)
+    let { image, title, ingredients, steps, adicional_info } = req.body;
+    return console.log({ image, title, ingredients, steps, adicional_info })
 
-    // **********************************  ATÉ AQUI OK *********************************
 
     // dataRecipes.recipes.push({
     //     image,

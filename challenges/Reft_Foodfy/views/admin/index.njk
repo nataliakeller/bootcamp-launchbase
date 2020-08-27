@@ -1,10 +1,19 @@
 {% extends "admin/layout.njk" %}
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
 
 
 {% block content %}
 <div class="recipes_admin_content">
     <div class="recipes_admin_title">
         <h2>Gerenciar receitas</h2>
+
+        <a href="recipes/create" id="add_button_link">
+            <span class="material-icons">
+                add
+            </span>
+        </a>
     </div>
 
     <div class="recipes_admin_wrapper">
