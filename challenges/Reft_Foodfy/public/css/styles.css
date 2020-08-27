@@ -337,7 +337,7 @@ footer p {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;    
-    width: 960px;
+    width: 980px;
     height: fit-content;
     margin: auto auto;
     gap: 25px;
@@ -345,8 +345,10 @@ footer p {
 
 .recipes_admin_wrapper .recipes_admin_block img {
     border-radius: 9px;
-    width: 172px;
-    height: auto;
+    width: 170px;
+    height: 70px;
+    /* width: 172px;
+    height: auto; */
 }
 
 .recipes_admin_wrapper .recipes_admin_info {

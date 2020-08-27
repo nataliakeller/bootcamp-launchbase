@@ -60,6 +60,4 @@ function addStep() {
     steps.appendChild(newField);
 }
 
-document
-    .querySelector(".add-step")
-    .addEventListener("click", addStep);
+document.querySelector(".add-step").addEventListener("click", addStep);

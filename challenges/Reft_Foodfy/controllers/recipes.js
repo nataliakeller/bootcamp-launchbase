@@ -1,6 +1,7 @@
 const fs = require('fs'); // File System
 const { create } = require('browser-sync');
 const dataRecipes = require('../data.json');
+const fetch = require("node-fetch");
 
 exports.index = function(req, res) {
     res.render('admin/index', { recipes: dataRecipes.recipes }); // adicionar dados
@@ -19,24 +20,24 @@ exports.post = function(req, res) {
             return res.send('Please enter the required fields.');
         };
     };
-    let { image, title, ingredients, steps, adicional_info } = req.body;
-    return console.log({ image, title, ingredients, steps, adicional_info })
+    let { image, title, ingredients, steps, information } = req.body;
+    const author = "Cesare Pavanese";
+    
+    dataRecipes.recipes.push({
+    image,
+    title,
+    author,
+    ingredients,
+    steps,
+    information
+    });
+    
+    fs.writeFile('data.json', JSON.stringify(dataRecipes, null, 2), function(err) { // escrevendo os dados no arquivo data.json
 
+        if (err) return res.send("writeFile error!");
 
-    // dataRecipes.recipes.push({
-    //     image,
-    //     title,
-    //     ingredients,
-    //     steps,
-    //     adicional_info
-    // });
-
-    // fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err) { // escrevendo os dados no arquivo data.json
-
-    //     if (err) return res.send("writeFile error!");
-
-    //     return console.log(req.body)
-    // });
+        return res.redirect('recipes');
+    });
 };
 
 exports.show = function(req, res) {

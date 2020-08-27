@@ -9,7 +9,7 @@
     <div class="recipes_admin_title">
         <h2>Gerenciar receitas</h2>
 
-        <a href="recipes/create" id="add_button_link">
+        <a href="create" id="add_button_link">
             <span class="material-icons">
                 add
             </span>
@@ -19,10 +19,13 @@
     <div class="recipes_admin_wrapper">
     {% for recipe in recipes %}
         <div class="recipes_admin_block" id="{{loop.index0}}">
-            
+
+            {% if recipe.image %}
+            <img src="{{recipe.image}}" alt="{{recipe.title}}">
+            {% else %}
             <img src="{{recipe.folder_img}}" alt="{{recipe.title}}">
-            
-            
+            {% endif %}
+          
             <div class="recipes_admin_info">
                 <h5>{{recipe.title}}</h5>
                 <p class="recipe_author">Por {{recipe.author}} </p>
