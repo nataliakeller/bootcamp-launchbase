@@ -3,7 +3,7 @@
         <div>Imagem da Receita</div>
 
         <div class="field_container">
-            <input type="text" name="image" required>
+            <input type="text" name="image" value="{{recipe.image}}"required>
         </div>
     </div>
 
@@ -11,7 +11,7 @@
         <div>Título da Receita</div>
 
         <div class="field_container">
-            <input type="text" name="title" required>
+            <input type="text" name="title" value="{{recipe.title}}" required>
         </div>
     </div>
 
@@ -20,9 +20,15 @@
             <div>Ingredientes</div>
 
             <div class="fieldContainerIngredients">
-                <input type="text" name="ingredients[]" value="">
+                
+                {% if ingredients.length > 1 %}
+                    {% for ingredient in ingredients %}
+                        <input type="text" name="ingredients[]" value="{{ingredient}}">
+                    {% endfor %}
+                {% else %}
+                    <input type="text" name="ingredients[]" value="{{ingredients}}">
+                {% endif %}
             </div>
-
         </div>
         <div class="add_input">
             <button type="button" class="add-ingredient">Adicionar ingrediente</button>
