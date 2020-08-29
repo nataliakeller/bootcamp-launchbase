@@ -58,7 +58,12 @@ header ul li a {
     color: #111111;
 }
 
+/* [ADMIN] HEADER */
+#admin_header {
+    background-color: #000000;
+}
 
+/* ======== */
 .cover_wrapper {
     width: 960px;
     height: 366px;
@@ -437,5 +442,92 @@ footer p {
     margin: 10px 0 15px;
     border-radius: 4px;
     box-sizing: border-box;
+}
+/*=== HEADER ADMIN TITLE ===*/
+.admin_title {
+    position: relative; 
+    width: 980px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.admin_title h1 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+    margin: 20px 8px 5px;
+    padding: 20px 0 5px;
+}
+
+/* === BUTTON === */
+.button {
+    color: #ffffff;
+    background-color: #6558C3;
+    width: 126px;
+    height: fit-content;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.delete_button {
+    position: relative; 
+    width: 980px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: -50px; */
+}
+
+.icon {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 28px;
+    background-color: #5448ad;
+    border-radius: 4px;
+    padding: 3px 2px 2px 2px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 27px;
+}
+
+.icon:hover {
+    transition: all 0.5s ease;
+    background-color: #DC4747;
+    box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+
+.save_button {
+    position: relative; 
+    width: 980px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+.save_button.edit {
+    display: block;
+    float: right;
+}
+
+.save_button button {
+    padding: 8px;
+}
+
+.edit_button {
+    float: right;
+    margin-top: 10px;
+}
+
+.edit_button a {
+    width: 128px;
+    height: 32px;
+    padding: 8px;
 }
 
