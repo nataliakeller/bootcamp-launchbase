@@ -138,42 +138,6 @@
         "açúcar de confeiteiro e corte em quadrados."
       ],
       "information": ""
-    },
-    {
-      "image": "Imagem",
-      "title": "Objeto de data",
-      "author": "Cesare Pavanese",
-      "ingredients": [
-        "MURALHA"
-      ],
-      "steps": [
-        "denuncia"
-      ],
-      "information": "zczxczxcxzcc"
-    },
-    {
-      "image": "https://images.pexels.com/photos/4409307/pexels-photo-4409307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500",
-      "title": "Objeto de data",
-      "author": "Cesare Pavanese",
-      "ingredients": [
-        "Vivamus ac sapien"
-      ],
-      "steps": [
-        "Cras a nulla placerat, malesuada tortor ut, accumsan lectus."
-      ],
-      "information": "aaaaaaaaaaaaaaaaaaaaaaaaaaaahttps://images.pexels.com/photos/4409307/pexels-photo-4409307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500"
-    },
-    {
-      "image": "https://images.pexels.com/photos/4409307/pexels-photo-4409307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500",
-      "title": "Objeto de data",
-      "author": "Cesare Pavanese",
-      "ingredients": [
-        "Vivamus ac sapien"
-      ],
-      "steps": [
-        "Cras a nulla placerat, malesuada tortor ut, accumsan lectus."
-      ],
-      "information": "aaaaaaaaaaaaaaaaaaaaaaaaaaaahttps://images.pexels.com/photos/4409307/pexels-photo-4409307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=500"
     }
   ]
 }
