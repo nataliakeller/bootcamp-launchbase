@@ -14,16 +14,8 @@ exports.create = function(req, res) {
 
 //post
 exports.post = function(req, res) {
-    const keys = Object.keys(req.body); // Validação
-
-    for (key of keys) {
-        
-        if (req.body[key] == '') { // Se algum campo do body está vazio...
-            return res.send('Please enter the required fields.');
-        };
-    };
     let { image, title, ingredients, steps, information } = req.body;
-    const author = "Cesare Pavanese";
+    const author = "Júlia Kinoto";
     
     dataRecipes.recipes.push({
     image,
@@ -49,13 +41,12 @@ exports.show = function(req, res) {
     if (!dataRecipes.recipes[recipeIndex]) {
         return res.send('Recipe Not Found');
     };
-    return res.render('admin/details', {index: recipeIndex, recipe: dataRecipes.recipes[recipeIndex], ingredients: dataRecipes.recipes[recipeIndex].ingredients, steps: dataRecipes.recipes[recipeIndex].preparation})
+    return res.render('admin/details', {index: recipeIndex, recipe: dataRecipes.recipes[recipeIndex], ingredients: dataRecipes.recipes[recipeIndex].ingredients, steps: dataRecipes.recipes[recipeIndex].steps, information: dataRecipes.recipes[recipeIndex].information})
 };
 
 //edit
 exports.edit = function(req, res) {
     const { id } = req.params;
-
 
     const foundRecipe = dataRecipes.recipes.find(function (recipe, index) {
         if (index == id) {
@@ -74,15 +65,16 @@ exports.edit = function(req, res) {
     };
 
     const ingredients = foundRecipe.ingredients;
+    const steps = foundRecipe.steps;
+    const information = foundRecipe.information;
 
     
-    return res.render('admin/edit', { recipe, ingredients });
+    return res.render('admin/edit', { recipe, ingredients, steps, information});
 };
 
 //put
 exports.put = function(req, res) {
     const { id } = req.body;
-
     const foundRecipe = dataRecipes.recipes[id];
 
     if (!foundRecipe) return res.send('Recipe not found');

@@ -3,7 +3,7 @@
         <div>Imagem da Receita</div>
 
         <div class="field_container">
-            <input type="text" name="image" value="{{recipe.image}}"required>
+            <input type="text" name="image" value="{{recipe.image}}" required="required">
         </div>
     </div>
 
@@ -11,7 +11,7 @@
         <div>Título da Receita</div>
 
         <div class="field_container">
-            <input type="text" name="title" value="{{recipe.title}}" required>
+            <input type="text" name="title" value="{{recipe.title}}" required="required">
         </div>
     </div>
 
@@ -19,16 +19,21 @@
         <div id="ingredients">
             <div>Ingredientes</div>
 
-            <div class="fieldContainerIngredients">
-                
                 {% if ingredients.length > 1 %}
                     {% for ingredient in ingredients %}
-                        <input type="text" name="ingredients[]" value="{{ingredient}}">
+                    <div>
+                        <input type="text" name="ingredients[]" value="{{ingredient}}" class="not-full">
+                        <div class="remove_input_button" onclick="remove(this)"></div>
+                    </div>
                     {% endfor %}
-                {% else %}
-                    <input type="text" name="ingredients[]" value="{{ingredients}}">
                 {% endif %}
-            </div>
+
+                <div class="fieldContainerIngredients">
+                    <input type="text" name="ingredients[]" value="" class="not-full">
+                    <div class="remove_input_button" onclick="remove(this)">
+                    </div>
+                </div>
+
         </div>
         <div class="add_input">
             <button type="button" class="add-ingredient">Adicionar ingrediente</button>
@@ -39,12 +44,25 @@
         <div id="steps">
             <div>Modo de Preparo</div>
 
-            <div class="fieldContainerSteps">
-                <input type="text" name="steps[]" value="">
-            </div>
+            {% if steps.length > 1 %}
+                    {% for step in steps %}
+                    <div>
+                        <input type="text" name="steps[]" value="{{step}}" class="not-full">
+                        <div class="remove_input_button" onclick="remove(this)">
+                        </div>
+                    </div>
+                    {% endfor %}
+            {% endif %}
+                
+                <div class="fieldContainerSteps">
+                    <input type="text" name="steps[]" value="" required class="not-full">
+                    <div class="remove_input_button" onclick="remove(this)">
+
+                    </div>
+                </div>
 
         </div>
-        
+
         <div class="add_input">
             <button type="button" class="add-step">Adicionar passos</button>
         </div>
@@ -54,7 +72,9 @@
         <div>Informações adicionais</div>
 
         <div>
-            <textarea name="information" id="text_area_info"></textarea>
+            <textarea name="information" id="text_area_info">
+                {{information}}
+            </textarea>
         </div>
     </div>
 

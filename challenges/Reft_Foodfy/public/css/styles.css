@@ -410,6 +410,10 @@ footer p {
     margin-top: 10px;
 }
 
+.admin_fields_item .not-full {
+    width: 94%; /* Deixando espaço para o botão de remover */
+}
+
 .admin_fields_item input {
     width: 100%;
     font-size: 22px;
@@ -531,3 +535,32 @@ footer p {
     padding: 8px;
 }
 
+/* CRIANDO MEU PRÓPRIO BOTÃO DE REMOVER */
+.remove_input_button  {
+    cursor: pointer;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    color: white !important;
+    background-color: #DC4747;
+    border-radius: 50%;
+    float: right;
+    top: 10px;
+}
+
+.remove_input_button::after {
+    content: '_';
+    font-size: 24px;
+    line-height: 15px;
+
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    margin: -5px 0 3px 7px;
+}
+
+.remove_input_button::after:hover, .remove_input_button:hover {
+    transition: all 0.5s ease;
+    background-color: #000000;
+
+}
