@@ -63,10 +63,8 @@ function addStep() {
 document.querySelector(".add-step").addEventListener("click", addStep);
 
 function remove(node) {
-    
     const parentDiv = node.parentNode;
     const inputNumber = (parentDiv.parentNode.children.length - 1) < 2;
-    console.log(inputNumber)
     if (!inputNumber) {
         const result = confirm('Deseja realmente deletar esse campo?');
         if (result) {

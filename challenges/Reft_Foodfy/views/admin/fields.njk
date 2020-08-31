@@ -19,20 +19,19 @@
         <div id="ingredients">
             <div>Ingredientes</div>
 
-                {% if ingredients.length > 1 %}
-                    {% for ingredient in ingredients %}
-                    <div>
+            {% if ingredients.length >= 1 %}
+                {% for ingredient in ingredients %}
+                    <div class="fieldContainerIngredients">
                         <input type="text" name="ingredients[]" value="{{ingredient}}" class="not-full">
                         <div class="remove_input_button" onclick="remove(this)"></div>
                     </div>
-                    {% endfor %}
-                {% endif %}
-
+                {% endfor %}
+            {% else %}
                 <div class="fieldContainerIngredients">
-                    <input type="text" name="ingredients[]" value="" class="not-full">
-                    <div class="remove_input_button" onclick="remove(this)">
-                    </div>
+                    <input type="text" name="ingredients[]" class="not-full">
+                    <div class="remove_input_button" onclick="remove(this)"></div>
                 </div>
+            {% endif %}
 
         </div>
         <div class="add_input">
@@ -44,22 +43,19 @@
         <div id="steps">
             <div>Modo de Preparo</div>
 
-            {% if steps.length > 1 %}
-                    {% for step in steps %}
-                    <div>
+            {% if steps.length >= 1 %}
+                {% for step in steps %}
+                    <div class="fieldContainerSteps">
                         <input type="text" name="steps[]" value="{{step}}" class="not-full">
-                        <div class="remove_input_button" onclick="remove(this)">
-                        </div>
+                        <div class="remove_input_button" onclick="remove(this)"></div>
                     </div>
-                    {% endfor %}
-            {% endif %}
-                
+                {% endfor %}
+            {% else %}
                 <div class="fieldContainerSteps">
-                    <input type="text" name="steps[]" value="" required class="not-full">
-                    <div class="remove_input_button" onclick="remove(this)">
-
-                    </div>
+                    <input type="text" name="steps[]" required="required" class="not-full">
+                    <div class="remove_input_button" onclick="remove(this)"></div>
                 </div>
+            {% endif %}
 
         </div>
 

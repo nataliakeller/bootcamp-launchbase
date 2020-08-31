@@ -465,7 +465,7 @@ footer p {
     padding: 20px 0 5px;
 }
 
-/* === BUTTON === */
+/* === BUTTONS === */
 .button {
     color: #ffffff;
     background-color: #6558C3;
@@ -479,10 +479,8 @@ footer p {
 .delete_button {
     position: relative; 
     width: 980px;
-    height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    /* margin-bottom: -50px; */
 }
 
 .icon {
@@ -496,7 +494,8 @@ footer p {
     color: #ffffff;
     text-align: center;
     margin-left: 10px;
-    margin-top: 27px;
+    /* margin-left: 10px;
+    margin-top: 27px; */
 }
 
 .icon:hover {
@@ -515,10 +514,10 @@ footer p {
     text-align: right;
 }
 
-.save_button.edit {
+/* .save_button.edit {
     display: block;
     float: right;
-}
+} */
 
 .save_button button {
     padding: 8px;
@@ -533,6 +532,11 @@ footer p {
     width: 128px;
     height: 32px;
     padding: 8px;
+}
+
+/*== ALIGNING THE TITLE/H1 WITH THE BUTTONS ==*/
+.save_button, .delete_button {
+    margin-top: -40px;
 }
 
 /* CRIANDO MEU PRÓPRIO BOTÃO DE REMOVER */
@@ -564,3 +568,4 @@ footer p {
     background-color: #000000;
 
 }
+
